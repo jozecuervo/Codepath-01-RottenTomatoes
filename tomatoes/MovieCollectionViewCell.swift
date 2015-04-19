@@ -12,12 +12,16 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var movieName: UILabel!
+    var ratingImageFilename :String! {
+        didSet {
+            ratingImage.image = UIImage(named: ratingImageFilename)
+        }
+    }
     
     let ratingImage = UIImageView()
     
     override func awakeFromNib() {
         contentView.addSubview(ratingImage)
-        ratingImage.image = UIImage(named: "rotten.png")
         ratingImage.backgroundColor = UIColor.clearColor()
         prepareForReuse()
         
@@ -28,20 +32,31 @@ class MovieCollectionViewCell: UICollectionViewCell {
         
         let originalSize = CGSizeMake(self.frame.size.width + 10, self.frame.size.width + 10)
         ratingImage.frame.size = originalSize
-        ratingImage.center = contentView.center
+        ratingImage.center = movieImageView.center
 
     }
     
-    func animateRating() {
+    func animate() {
+        ratingImage.alpha = 0.0
         ratingImage.hidden = false
         let destinationSize = CGSizeMake(50, 50)
-        
-        UIView.animateWithDuration(1.5, animations: { () -> Void in
-            self.ratingImage.center = self.contentView.center
+        movieName.center = CGPoint(x: -150, y: movieName.center.y)
+        UIView.animateWithDuration(0.7, delay: 0.8, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.4, options: UIViewAnimationOptions.TransitionNone, animations: { () -> Void in
+            self.ratingImage.center = CGPointMake(100,100)
             self.ratingImage.frame.size = destinationSize
-        }) { (completed) -> Void in
+            self.ratingImage.alpha = 1.0
+            self.movieName.frame.origin.x = 5
+        }) { (complete) -> Void in
             //
         }
         
+    }
+    
+    func layout() {
+        ratingImage.hidden = false
+        ratingImage.alpha = 1.0
+        let destinationSize = CGSizeMake(50, 50)
+        ratingImage.center = CGPointMake(100,100)
+        ratingImage.frame.size = destinationSize
     }
 }

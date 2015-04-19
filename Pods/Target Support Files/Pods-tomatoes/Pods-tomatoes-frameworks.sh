@@ -49,12 +49,14 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'AFNetworking.framework'
+  install_framework 'JGProgressHUD.framework'
   install_framework 'PureLayout.framework'
   install_framework 'SDWebImage.framework'
   install_framework 'SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'AFNetworking.framework'
+  install_framework 'JGProgressHUD.framework'
   install_framework 'PureLayout.framework'
   install_framework 'SDWebImage.framework'
   install_framework 'SwiftyJSON.framework'

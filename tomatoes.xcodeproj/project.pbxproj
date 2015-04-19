@@ -18,6 +18,12 @@
 		25B612F31ADDEC3E00E9D54E /* tomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B612F21ADDEC3E00E9D54E /* tomatoesTests.swift */; };
 		25B612FD1ADDEE6C00E9D54E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B612FC1ADDEE6C00E9D54E /* MoviesViewController.swift */; };
 		8BD5A407DE3951B6E1242E74 /* Pods_tomatoes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0914A7894EDCA7E3986033C9 /* Pods_tomatoes.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A08168B11AE443770052C8CF /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08168B01AE443770052C8CF /* MovieDetailViewController.swift */; };
+		A08168B31AE4441E0052C8CF /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A08168B21AE4441E0052C8CF /* placeholder.jpg */; };
+		A08168B51AE44A6E0052C8CF /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08168B41AE44A6E0052C8CF /* CastTableViewCell.swift */; };
+		A08168B71AE459E30052C8CF /* crossed-lightsabers.png in Resources */ = {isa = PBXBuildFile; fileRef = A08168B61AE459E30052C8CF /* crossed-lightsabers.png */; };
+		A08168BA1AE46A250052C8CF /* empire.png in Resources */ = {isa = PBXBuildFile; fileRef = A08168B81AE46A250052C8CF /* empire.png */; };
+		A08168BB1AE46A250052C8CF /* rebel.png in Resources */ = {isa = PBXBuildFile; fileRef = A08168B91AE46A250052C8CF /* rebel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,12 @@
 		25B612FC1ADDEE6C00E9D54E /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		25D0F5711AE04E3600A8F6F0 /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E4B9B4B76F708713A22E929 /* Pods-tomatoes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomatoes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tomatoes/Pods-tomatoes.debug.xcconfig"; sourceTree = "<group>"; };
+		A08168B01AE443770052C8CF /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		A08168B21AE4441E0052C8CF /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
+		A08168B41AE44A6E0052C8CF /* CastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
+		A08168B61AE459E30052C8CF /* crossed-lightsabers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crossed-lightsabers.png"; sourceTree = "<group>"; };
+		A08168B81AE46A250052C8CF /* empire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empire.png; sourceTree = "<group>"; };
+		A08168B91AE46A250052C8CF /* rebel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rebel.png; sourceTree = "<group>"; };
 		F353A420DD5703DB261AD7E4 /* Pods-tomatoes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomatoes.release.xcconfig"; path = "Pods/Target Support Files/Pods-tomatoes/Pods-tomatoes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +85,10 @@
 		2550F8821AE1B59200BF21ED /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A08168B81AE46A250052C8CF /* empire.png */,
+				A08168B91AE46A250052C8CF /* rebel.png */,
+				A08168B61AE459E30052C8CF /* crossed-lightsabers.png */,
+				A08168B21AE4441E0052C8CF /* placeholder.jpg */,
 				2550F8831AE1B59200BF21ED /* rotten.png */,
 			);
 			path = Resources;
@@ -113,6 +129,8 @@
 				25B612FC1ADDEE6C00E9D54E /* MoviesViewController.swift */,
 				2550F8801AE1B11B00BF21ED /* MovieCollectionViewCell.swift */,
 				2550F8851AE1B76D00BF21ED /* Movie.swift */,
+				A08168B01AE443770052C8CF /* MovieDetailViewController.swift */,
+				A08168B41AE44A6E0052C8CF /* CastTableViewCell.swift */,
 			);
 			path = tomatoes;
 			sourceTree = "<group>";
@@ -251,7 +269,11 @@
 			files = (
 				2550F8841AE1B59200BF21ED /* rotten.png in Resources */,
 				25B612E21ADDEC3E00E9D54E /* Main.storyboard in Resources */,
+				A08168BA1AE46A250052C8CF /* empire.png in Resources */,
+				A08168B71AE459E30052C8CF /* crossed-lightsabers.png in Resources */,
 				25B612E71ADDEC3E00E9D54E /* LaunchScreen.xib in Resources */,
+				A08168B31AE4441E0052C8CF /* placeholder.jpg in Resources */,
+				A08168BB1AE46A250052C8CF /* rebel.png in Resources */,
 				25B612E41ADDEC3E00E9D54E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,8 +342,10 @@
 			files = (
 				25B612DF1ADDEC3E00E9D54E /* ViewController.swift in Sources */,
 				25B612DD1ADDEC3E00E9D54E /* AppDelegate.swift in Sources */,
+				A08168B51AE44A6E0052C8CF /* CastTableViewCell.swift in Sources */,
 				25B612FD1ADDEE6C00E9D54E /* MoviesViewController.swift in Sources */,
 				2550F8811AE1B11B00BF21ED /* MovieCollectionViewCell.swift in Sources */,
+				A08168B11AE443770052C8CF /* MovieDetailViewController.swift in Sources */,
 				2550F8861AE1B76D00BF21ED /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
