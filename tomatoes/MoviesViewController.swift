@@ -123,14 +123,14 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
         errorView.addSubview(errorViewLabel)
         view.insertSubview(errorView, aboveSubview: collectionView)
         
-        UIView.animateWithDuration(1.0, animations: { () -> Void in
+        UIView.animateWithDuration(0.8, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.3, options: UIViewAnimationOptions.TransitionNone, animations: { () -> Void in
             errorView.frame.origin.y = 60
         }) { (completed) -> Void in
             // Move error out
             UIView.animateWithDuration(1.0, delay: 3.0, options: UIViewAnimationOptions.TransitionNone, animations: { () -> Void in
                 errorView.frame.origin.y = 0
-            }, completion: { (completed) -> Void in
-                errorView.removeFromSuperview()
+                }, completion: { (completed) -> Void in
+                    errorView.removeFromSuperview()
             })
         }
     }
