@@ -15,9 +15,9 @@ class CastTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
-        visualEffectView.frame = bounds
-        contentView.insertSubview(visualEffectView, belowSubview: nameLabel)
+//        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
+//        visualEffectView.frame = bounds
+//        contentView.insertSubview(visualEffectView, belowSubview: nameLabel)
 
     }
 

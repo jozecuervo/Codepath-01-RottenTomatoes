@@ -21,6 +21,11 @@ class MovieDetailViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.dataSource = self        
         tableView.contentInset = UIEdgeInsetsMake(400, 0, 0, 0)
         
+        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
+        visualEffectView.frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: tableView.frame.size.height)
+        tableView.addSubview(visualEffectView)
+        tableView.sendSubviewToBack(visualEffectView)
+
         poster.sd_setImageWithURL(movie.imageUrl, placeholderImage: UIImage(named: "placeholder.jpg"))
     }
 
@@ -68,7 +73,7 @@ class MovieDetailViewController: UIViewController, UITableViewDelegate, UITableV
                 cell.textLabel?.text = "Critic's Score: \(ratingString)"
             } else {
                 let ratingString = movie.rating > 0 ? String(movie.rating) : "None"
-                cell.textLabel?.text = "Audience Socre: \(ratingString)"
+                cell.textLabel?.text = "Audience Score: \(ratingString)"
             }
             
             cell.textLabel!.font = UIFont(name: "Helvetica-Neue", size: 9)
