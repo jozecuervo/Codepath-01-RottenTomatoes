@@ -36,12 +36,12 @@ class MovieCollectionViewCell: UICollectionViewCell {
 
     }
     
-    func animate() {
+    func animate(delay: Double = 0) {
         ratingImage.alpha = 0.0
         ratingImage.hidden = false
         let destinationSize = CGSizeMake(50, 50)
         movieName.center = CGPoint(x: -150, y: movieName.center.y)
-        UIView.animateWithDuration(0.7, delay: 0.8, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.4, options: UIViewAnimationOptions.TransitionNone, animations: { () -> Void in
+        UIView.animateWithDuration(0.7, delay: 0.7 + delay, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.4, options: UIViewAnimationOptions.TransitionNone, animations: { () -> Void in
             self.ratingImage.center = CGPointMake(100,100)
             self.ratingImage.frame.size = destinationSize
             self.ratingImage.alpha = 1.0

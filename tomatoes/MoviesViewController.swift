@@ -13,7 +13,7 @@ import JGProgressHUD
 import AFNetworking
 
 class MoviesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     var movies = NSMutableArray()
     let refreshControl = UIRefreshControl()
@@ -43,7 +43,8 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
             cell.movieImageView.sd_setImageWithURL(movie.imageUrl, placeholderImage: UIImage(named:"placeholder.jpg"))
             cell.ratingImageFilename = movie.rating > 50 ? "rebel.png" : "empire.png"
             if !movie.displayed {
-                cell.animate()
+                var delay = Double(indexPath.item % 2) * 0.1
+                cell.animate(delay: delay)
                 movie.displayed = true
             } else {
                 cell.layout()
