@@ -44,8 +44,12 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
             cell.ratingImageFilename = movie.rating > 50 ? "rebel.png" : "empire.png"
             if !movie.displayed {
                 var delay = Double(indexPath.item % 2) * 0.1
-                cell.animate(delay: delay)
-                movie.displayed = true
+                UIView.transitionWithView(cell.movieImageView, duration: 0.8, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                    cell.animate(delay: delay)
+                    movie.displayed = true
+                }, completion: { (completed) -> Void in
+                    //
+                })
             } else {
                 cell.layout()
             }
