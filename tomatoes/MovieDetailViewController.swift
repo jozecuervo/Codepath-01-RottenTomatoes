@@ -18,9 +18,7 @@ class MovieDetailViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
-        tableView.dataSource = self
-        refresh()
-        
+        tableView.dataSource = self        
         tableView.contentInset = UIEdgeInsetsMake(400, 0, 0, 0)
         
         poster.sd_setImageWithURL(movie.imageUrl, placeholderImage: UIImage(named: "placeholder.jpg"))
@@ -95,25 +93,5 @@ class MovieDetailViewController: UIViewController, UITableViewDelegate, UITableV
         return UITableViewCell()
     }
     
-    
-    func refresh() {
-        let apiUrlString = "http://www.omdbapi.com/"
-        var params = NSMutableDictionary()
-        params["t"] = movie.name
-        params["plot"] = "full"
-        params["r"] = "json"
-        
-        let manager = AFHTTPRequestOperationManager()
-        manager.GET(apiUrlString,
-            parameters: params,
-            success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
-                //Complete
-            },
-            failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
-                //Error
-            }
-        )
-        
-    }
     
 }
