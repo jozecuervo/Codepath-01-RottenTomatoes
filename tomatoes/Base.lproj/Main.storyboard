@@ -38,7 +38,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zBy-8f-GHC">
                                                     <rect key="frame" x="0.0" y="185" width="148" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.35224986587982832" green="0.35224986587982832" blue="0.35224986587982832" alpha="0.47999999999999998" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.099034114617202018" green="0.099034114617202018" blue="0.099034114617202018" alpha="0.63" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
