@@ -43,10 +43,10 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
             cell.movieImageView.sd_setImageWithURL(movie.imageUrl, placeholderImage: UIImage(named:"placeholder.jpg"))
             cell.ratingImageFilename = movie.rating > 50 ? "rebel.png" : "empire.png"
             if !movie.displayed {
+                movie.displayed = true
                 var delay = Double(indexPath.item % 2) * 0.1
-                UIView.transitionWithView(cell.movieImageView, duration: 0.8, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                UIView.transitionWithView(cell.movieImageView, duration: 0.4, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
                     cell.animate(delay: delay)
-                    movie.displayed = true
                 }, completion: { (completed) -> Void in
                     //
                 })

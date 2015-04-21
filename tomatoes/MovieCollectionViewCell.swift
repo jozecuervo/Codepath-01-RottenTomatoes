@@ -24,22 +24,26 @@ class MovieCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(ratingImage)
         ratingImage.backgroundColor = UIColor.clearColor()
         prepareForReuse()
-        movieName.center = CGPoint(x: -150, y: movieName.center.y)
     }
     
     override func prepareForReuse() {
+        ratingImage.layer.removeAllAnimations()
+        movieName.layer.removeAllAnimations()
+        
         ratingImage.hidden = true
         
         let originalSize = CGSizeMake(self.frame.size.width + 10, self.frame.size.width + 10)
         ratingImage.frame.size = originalSize
         ratingImage.center = movieImageView.center
-
+        movieName.center = CGPoint(x: -150, y: movieName.center.y)
     }
     
     func animate(delay: Double = 0) {
         ratingImage.alpha = 0.0
         ratingImage.hidden = false
         let destinationSize = CGSizeMake(50, 50)
+        movieName.center = CGPoint(x: -150, y: movieName.center.y)
+
         UIView.animateWithDuration(0.7, delay: 0.7 + delay, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.4, options: UIViewAnimationOptions.TransitionNone, animations: { () -> Void in
             self.ratingImage.center = CGPointMake(100,100)
             self.ratingImage.frame.size = destinationSize
