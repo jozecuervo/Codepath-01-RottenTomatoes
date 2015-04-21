@@ -48,7 +48,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
             self.ratingImage.center = CGPointMake(100,100)
             self.ratingImage.frame.size = destinationSize
             self.ratingImage.alpha = 1.0
-            self.movieName.frame.origin.x = 5
+            self.movieName.frame.origin.x = 0
         }) { (complete) -> Void in
             //
         }
@@ -61,5 +61,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
         let destinationSize = CGSizeMake(50, 50)
         ratingImage.center = CGPointMake(100,100)
         ratingImage.frame.size = destinationSize
+        movieName.frame.origin.x = 0
     }
 }
